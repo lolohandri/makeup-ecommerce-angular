@@ -1,0 +1,17 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+$ecommerce-makeup-app-primary: mat.define-palette(mat.$gray-palette, 900 );
+$ecommerce-makeup-app-accent: mat.define-palette(mat.$pink-palette, A100);
+
+$ecommerce-makeup-app-warn: mat.define-palette(mat.$red-palette, A200);
+
+$ecommerce-makeup-app-theme: mat.define-light-theme((
+  color: (
+    primary: $ecommerce-makeup-app-primary,
+    accent: $ecommerce-makeup-app-accent,
+    warn: $ecommerce-makeup-app-warn,
+  )
+));
+@include mat.all-component-themes($ecommerce-makeup-app-theme);
+

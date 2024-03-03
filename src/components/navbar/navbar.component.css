@@ -1,0 +1,42 @@
+/*links*/
+.links-container{
+
+}
+.active {
+  color: pink !important;
+}
+
+a:hover {
+  color: gray;
+  transition: color 0.5s;
+}
+
+a {
+  transition: color 0.2s;
+}
+
+/*Logo*/
+.logo-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logo {
+  width: 64px;
+  height: 64px;
+}
+.header{
+  font-size: 20px;
+}
+
+/*Cart*/
+.cart-container{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navbar {
+  height: 88px;
+  gap: 10px;
+}

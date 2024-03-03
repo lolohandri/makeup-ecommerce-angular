@@ -1,0 +1,20 @@
+<mat-toolbar class="navbar" color="primary">
+  <div class="logo-container">
+    <img class="logo" src="assets/images/logo.png" alt="Company logo">
+    <h1 class="header">MAKEUP</h1>
+  </div>
+
+  <div class="links-container">
+    <a mat-button routerLink="home" routerLinkActive="active">Home</a>
+    <a mat-button routerLink="catalogue" routerLinkActive="active">Catalogue</a>
+  </div>
+
+  <div class="cart-container">
+    <a class="relative" mat-button routerLink="cart" routerLinkActive="active">
+        <mat-icon>shopping_cart</mat-icon>
+        <div *ngIf="cartService.getCurrentCartValue() as cart" class="flex text-black font-bold justify-around bg-pink-400 rounded-full w-6 h-6 absolute top-[-24px] left-[-5px]">
+            {{cart?.items?.length}}
+        </div>
+    </a>
+  </div>
+</mat-toolbar>

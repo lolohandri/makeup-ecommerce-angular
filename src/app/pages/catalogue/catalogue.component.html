@@ -1,0 +1,23 @@
+<h1 class="text-center text-4xl font-bold my-5">Catalogue</h1>
+<div class="w-full h-0.5 bg-black"></div>
+
+<div class="flex justify-between m-10">
+    <div>
+        <h1 class="text-2xl font-bold">Sorting</h1>
+        <mat-form-field class="w-full" color="primary">
+            <mat-select (selectionChange)="onSortSelected($event)" placeholder="Sorting option">
+                <mat-option *ngFor="let sort of sorting" [value]="sort.value">{{sort.viewValue}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div *ngIf="!loading; else elseLoading" class="flex flex-wrap gap-y-5 w-3/4">
+        <div class="w-1/4 p-2.5 relative hover:shadow-xl transition duration-500 ease-in"
+             *ngFor="let product of products">
+            <app-product-item [product]="product"></app-product-item>
+        </div>
+    </div>
+    <ng-template #elseLoading>
+        <app-loading></app-loading>
+    </ng-template>
+</div>

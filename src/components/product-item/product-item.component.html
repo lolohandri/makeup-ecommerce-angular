@@ -1,0 +1,35 @@
+<a *ngIf="product" routerLink="/products/{{product.id}}">
+    <div class="flex justify-around mb-2.5">
+        <img mat-card-image src="{{product.api_featured_image}}" alt="{{product.name}}">
+    </div>
+
+    <div class="gap-10">
+        <div class="flex flex-col gap-1 text-left">
+            <h3 *ngIf="product.brand" class="font-bold">{{product.brand.toUpperCase()}}</h3>
+            <h4>{{product.name}}</h4>
+        </div>
+
+        <div class="flex flex-col mt-10 gap-1">
+            <p *ngIf="product.category">
+                <span class="font-bold">Category: </span>
+                {{product.category}}
+            </p>
+            <p>
+                {{product.price_sign ? product.price_sign : '$'}}{{product.price ? product.price : 0.0}}
+            </p>
+
+            <div *ngIf="product.rating" class="flex gap-1">
+                <mat-icon class="text-amber-400">star</mat-icon>
+                <p>{{product.rating}}</p>
+            </div>
+
+            <div class="flex flex-row flex-wrap">
+                <div [ngStyle]="{'background-color': color.hex_value}" class="m-1 rounded-full w-5 h-5" *ngFor="let color of product.product_colors"></div>
+            </div>
+        </div>
+    </div>
+</a>
+<button (click)="addItemToCart()" class="mt-5" mat-raised-button color="primary">Add to cart</button>
+
+
+
