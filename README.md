@@ -1,3 +1,9 @@
+# Fake Cart API
+This project uses cart fake api made with json-server
+
+>[Important]
+> Before starting the application run `npx json-server src/db.json` to start local cart server
+
 # EcommerceMakeupApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
