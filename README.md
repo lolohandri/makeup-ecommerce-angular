@@ -1,8 +1,8 @@
 # Fake Cart API
 This project uses cart fake api made with json-server
 
->[IMPORTANT]
-> Before starting the application run `npx json-server src/db.json` to start local cart server
+>[!IMPORTANT]
+> Before starting the application run `npx json-server src/db.json` to start local cart server.
 
 # EcommerceMakeupApp
 
