@@ -5,7 +5,7 @@ import {MatAnchor, MatButton} from "@angular/material/button";
 import {NgForOf, NgIf, NgStyle} from "@angular/common";
 import {RouterLink} from "@angular/router";
 import {MatIcon} from "@angular/material/icon";
-import {CartService} from "../../app/pages/cart/cart.service";
+import {CartService} from "../../app/services/cart.service";
 
 @Component({
     selector: 'app-product-item',

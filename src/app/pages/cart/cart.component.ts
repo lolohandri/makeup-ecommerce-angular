@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CartService} from "./cart.service";
+import {CartService} from "../../services/cart.service";
 import {Product} from "../../../interfaces/product";
 import {NgForOf, NgIf} from "@angular/common";
 import {CartItem} from "../../../interfaces/cart";

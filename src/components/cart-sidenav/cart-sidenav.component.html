@@ -1,14 +1,13 @@
-<h1 class="text-center text-4xl font-bold my-5">Cart</h1>
-<div class="w-full h-0.5 bg-black"></div>
-<div class="m-10 h-full">
+<h1 class="text-center font-bold my-5">Cart</h1>
+<div class="m-10">
     <h1 *ngIf="!cartService.getCurrentCartValue()" class="text-3xl text-center">Cart is empty</h1>
     <ul class="flex flex-col gap-5">
-        <li class="h-[126px]" *ngFor="let product of cartService.getCurrentCartValue()?.items">
+        <li class="h-[120px]" *ngFor="let product of cartService.getCurrentCartValue()?.items">
             <div class="h-full flex gap-2.5">
                 <img src="{{product.api_featured_image}}" alt="{{product.name}}"/>
-                <div class="flex flex-col">
-                    <h1 class="font-bold">{{product.brand.toUpperCase()}}</h1>
-                    <h2>{{product.name}}</h2>
+                <div class="flex flex-col w-full">
+                    <h2 class="font-bold">{{product.brand.toUpperCase()}}</h2>
+                    <h3>{{product.name}}</h3>
                     <p>
                         <span class="font-bold">Price: </span>
                         {{product.price_sign ? product.price_sign : '$'}}{{product.price ? product.price : 0.0}}
@@ -19,7 +18,7 @@
                     </p>
                 </div>
 
-                <div class="w-full flex justify-end items-center">
+                <div class="flex justify-end items-center">
                     <button (click)="removeItem(product.id)" mat-stroked-button color="warn">Delete</button>
                 </div>
             </div>
